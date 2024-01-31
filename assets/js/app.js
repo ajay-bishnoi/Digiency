@@ -49,3 +49,16 @@ $(".mySlider").slick({
     },
   ],
 });
+
+let mybutton = document.getElementById("myBtn");
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    mybutton.classList.add("show");
+  } else {
+    mybutton.classList.remove("show");
+  }
+});
